@@ -33,5 +33,9 @@ sub check {
   } else {
     $self->add_unknown();
   }
+  $self->add_perfdata(		
+    label => 'voltage'.$self->{voltageSensorName},		
+    value => $self->{voltageSensorValue},		
+  );
 }
 
